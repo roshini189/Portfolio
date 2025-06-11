@@ -1,5 +1,9 @@
+
+
 {
-  "name": "roshini-portfolio",
+   "name": "portfolio",
+ 
+  "homepage": "https://roshini189.github.io/Portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
