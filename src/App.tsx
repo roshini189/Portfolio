@@ -110,7 +110,7 @@ function App() {
       technologies: ["Java", "Angular", "Javascript", "MySQL", "Springboot", "RestAPI"],
       github: "https://github.com/roshini189/Agricitease",
       category: "Full Stack Development",
-      image: "images/Agricitease.png" },
+      image: "images/Agricitease.jpeg" },
     {
       id: 6,
       title: "Customer Revenue Predictor - ML Prediction",
@@ -254,7 +254,7 @@ const filteredProjects = activeProjectCategory === "All"
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 p-1">
               <img
-  src="images/bio.png"
+  src="images/bio.jpeg"
   alt="Roshini Talluru"
   className="w-full h-full rounded-full object-cover"
 />
@@ -282,7 +282,7 @@ const filteredProjects = activeProjectCategory === "All"
 
 {/* Resume Link */}
 <a
-  href="images/Roshini_talluru_Resume.pdf"
+  href="/Roshini_talluru_Resume.pdf"
   target="_blank"
   rel="noopener noreferrer"
   className="text-white hover:text-purple-300 transition-colors"
@@ -353,7 +353,7 @@ const filteredProjects = activeProjectCategory === "All"
                   <div className="flex items-center space-x-3">
   <FileText className="w-5 h-5 text-purple-400" />
   <a
-    href="images/Roshini_talluru_Resume.pdf"
+    href="/Roshini_talluru_Resume.pdf"
     target="_blank"
     rel="noopener noreferrer"
     className="text-purple-300 hover:underline"
