@@ -71,7 +71,7 @@ function App() {
     ],
     github: "https://github.com/roshini189/Portfolio",
     category: "Full Stack Development",
-    image: "src/images/port.jpeg",
+    image: "images/port.jpeg",
   },{
       id: 2,
       title: "AlResearchEase- AI Research Chatbot",
@@ -80,7 +80,7 @@ function App() {
       technologies: ["Streamlit","Ollama API","Python","NLP","DeepLearning","RAG","LLM","FAISS", "Docker"],
       github: "https://github.com/roshini189/AI_Research_Ease",
       category: "Deeplearning",
-      image: "src/images/Ai.jpeg" },
+      image: "images/Ai.jpeg" },
     {
       id: 3,
       title: "ViceDetect - ML Prediction System",
@@ -89,7 +89,7 @@ function App() {
       technologies: ["R", "XGBoost", "K-means", "Machine Learning", "Data Visualization", "Statistical Analysis"],
       github: "https://github.com/roshini189/ViceDetect",
       category: "Machine Learning",
-      image: "src/images/vice.jpeg" ,
+      image: "images/vice.jpeg" ,
      },
    
     {
@@ -101,7 +101,7 @@ function App() {
       github: "https://github.com/roshini189/Safeclick",
       Demo:"",
       category: "DataMining",
-      image: "src/images/images.jpeg"  },
+      image: "images/images.jpeg"  },
     {
       id: 5,
       title: "Agricitease",
@@ -110,7 +110,7 @@ function App() {
       technologies: ["Java", "Angular", "Javascript", "MySQL", "Springboot", "RestAPI"],
       github: "https://github.com/roshini189/Agricitease",
       category: "Full Stack Development",
-      image: "src/images/Agricitease.png?auto=compress" },
+      image: "images/Agricitease.png?auto=compress" },
     {
       id: 6,
       title: "Customer Revenue Predictor - ML Prediction",
@@ -119,7 +119,7 @@ function App() {
       technologies: ["R","Mice","RStudio","Caret","Regression"],
       github: "https://github.com/roshini189/Customer-Revenue-Predictor",
       category: "MachineLearning",
-      image: "src/images/crp.jpeg?auto=compress" },
+      image: "images/crp.jpeg?auto=compress" },
    
   ];
 
@@ -282,7 +282,7 @@ const filteredProjects = activeProjectCategory === "All"
 
 {/* Resume Link */}
 <a
-  href="src/Roshini_talluru_Resume.pdf"
+  href="images/Roshini_talluru_Resume.pdf"
   target="_blank"
   rel="noopener noreferrer"
   className="text-white hover:text-purple-300 transition-colors"
@@ -353,7 +353,7 @@ const filteredProjects = activeProjectCategory === "All"
                   <div className="flex items-center space-x-3">
   <FileText className="w-5 h-5 text-purple-400" />
   <a
-    href="src/Roshini_talluru_Resume.pdf"
+    href="images/Roshini_talluru_Resume.pdf"
     target="_blank"
     rel="noopener noreferrer"
     className="text-purple-300 hover:underline"
