@@ -71,11 +71,7 @@ function App() {
     ],
     github: "https://github.com/roshini189/Portfolio",
     category: "Full Stack Development",
-<<<<<<< HEAD
-    image: "src/images/port.jpg"
-=======
-    image: "src/images/port.jpeg"
->>>>>>> b25c0ec (APP)
+    image: "src/images/port.jpeg",
   },{
       id: 2,
       title: "AlResearchEase- AI Research Chatbot",
@@ -84,11 +80,7 @@ function App() {
       technologies: ["Streamlit","Ollama API","Python","NLP","DeepLearning","RAG","LLM","FAISS", "Docker"],
       github: "https://github.com/roshini189/AI_Research_Ease",
       category: "Deeplearning",
-<<<<<<< HEAD
-      image: "src/images/Ai.jpg" },
-=======
       image: "src/images/Ai.jpeg" },
->>>>>>> b25c0ec (APP)
     {
       id: 3,
       title: "ViceDetect - ML Prediction System",
@@ -97,11 +89,7 @@ function App() {
       technologies: ["R", "XGBoost", "K-means", "Machine Learning", "Data Visualization", "Statistical Analysis"],
       github: "https://github.com/roshini189/ViceDetect",
       category: "Machine Learning",
-<<<<<<< HEAD
-      image: "src/images/vice.jpg" ,
-=======
       image: "src/images/vice.jpeg" ,
->>>>>>> b25c0ec (APP)
      },
    
     {
@@ -131,11 +119,7 @@ function App() {
       technologies: ["R","Mice","RStudio","Caret","Regression"],
       github: "https://github.com/roshini189/Customer-Revenue-Predictor",
       category: "MachineLearning",
-<<<<<<< HEAD
-      image: "src/images/crp.jpg?auto=compress" },
-=======
       image: "src/images/crp.jpeg?auto=compress" },
->>>>>>> b25c0ec (APP)
    
   ];
 
@@ -538,12 +522,7 @@ const filteredProjects = activeProjectCategory === "All"
             <h3 className="text-xl font-semibold text-white">B.Tech in Computer Science and Engineering</h3>
             <p className="text-purple-300">BVRIT Hyderabad</p>
           </div>
-<<<<<<< HEAD
-          <span className="text-gray-400">2017 - 2021</span>
-=======
-          <span className="text-gray-400">2018 - 2022</span>
->>>>>>> b25c0ec (APP)
-        </div>
+    </div>
         <p className="text-gray-300">Graduated with First Class Distinction. Involved in research and Women in Software Engineering Program (WISE).</p>
       </div>
     </div>
