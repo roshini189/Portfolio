@@ -282,7 +282,7 @@ const filteredProjects = activeProjectCategory === "All"
 
 {/* Resume Link */}
 <a
-  href="/Roshini_talluru_Resume.pdf"
+  href="images/Roshini_talluru_Resume.pdf"
   target="_blank"
   rel="noopener noreferrer"
   className="text-white hover:text-purple-300 transition-colors"
@@ -353,7 +353,7 @@ const filteredProjects = activeProjectCategory === "All"
                   <div className="flex items-center space-x-3">
   <FileText className="w-5 h-5 text-purple-400" />
   <a
-    href="/Roshini_talluru_Resume.pdf"
+    href="images/Roshini_talluru_Resume.pdf"
     target="_blank"
     rel="noopener noreferrer"
     className="text-purple-300 hover:underline"
