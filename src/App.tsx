@@ -1,4 +1,14 @@
 import React, { useState, useEffect } from 'react';
+
+// Provide a fallback JSX IntrinsicElements declaration to satisfy TypeScript
+// in environments where JSX lib/type declarations may be missing.
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      [elemName: string]: any;
+    }
+  }
+}
 import {
   Github, 
   Linkedin, 
@@ -696,7 +706,7 @@ const filteredProjects = activeProjectCategory === "All"
               <div className="mb-6">
                 <h4 className="text-white font-semibold mb-3">Technologies Used:</h4>
                 <div className="flex flex-wrap gap-2">
-                  {selectedProject.technologies.map((tech) => (
+                  {selectedProject.technologies.map((tech: string) => (
                     <span key={tech} className="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm">
                       {tech}
                     </span>
