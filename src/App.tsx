@@ -41,7 +41,7 @@ function App() {
       setIsScrolled(window.scrollY > 50);
       
       // Update active section based on scroll position
-      const sections = ['home', 'about', 'projects', 'skills', 'experience', 'contact'];
+      const sections = ['home', 'about', 'experience', 'projects', 'skills', 'education', 'awards', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -71,7 +71,7 @@ function App() {
     ],
     github: "https://github.com/roshini189/Portfolio",
     category: "Full Stack Development",
-    image: "images/port.jpeg",
+    image: "public/images/port.jpeg"
   },{
       id: 2,
       title: "AlResearchEase- AI Research Chatbot",
@@ -80,7 +80,7 @@ function App() {
       technologies: ["Streamlit","Ollama API","Python","NLP","DeepLearning","RAG","LLM","FAISS", "Docker"],
       github: "https://github.com/roshini189/AI_Research_Ease",
       category: "Deeplearning",
-      image: "images/Ai.jpeg" },
+      image: "public/images/Ai.jpeg" },
     {
       id: 3,
       title: "ViceDetect - ML Prediction System",
@@ -89,7 +89,7 @@ function App() {
       technologies: ["R", "XGBoost", "K-means", "Machine Learning", "Data Visualization", "Statistical Analysis"],
       github: "https://github.com/roshini189/ViceDetect",
       category: "Machine Learning",
-      image: "images/vice.jpeg" ,
+      image: "public/images/vice.jpeg" ,
      },
    
     {
@@ -101,7 +101,7 @@ function App() {
       github: "https://github.com/roshini189/Safeclick",
       Demo:"",
       category: "DataMining",
-      image: "images/images.jpeg"  },
+      image: "public/images/images.jpeg"  },
     {
       id: 5,
       title: "Agricitease",
@@ -110,7 +110,7 @@ function App() {
       technologies: ["Java", "Angular", "Javascript", "MySQL", "Springboot", "RestAPI"],
       github: "https://github.com/roshini189/Agricitease",
       category: "Full Stack Development",
-      image: "images/Agricitease.jpeg" },
+      image: "public/images/Agricitease.jpeg" },
     {
       id: 6,
       title: "Customer Revenue Predictor - ML Prediction",
@@ -119,7 +119,7 @@ function App() {
       technologies: ["R","Mice","RStudio","Caret","Regression"],
       github: "https://github.com/roshini189/Customer-Revenue-Predictor",
       category: "MachineLearning",
-      image: "images/crp.jpeg?auto=compress" },
+      image: "public/images/crp.jpeg" },
    
   ];
 
@@ -130,22 +130,37 @@ function App() {
     { name: "C", level: 90, icon: Code, category: "Programming Languages" },
     { name: "C++", level: 90, icon: Code, category: "Programming Languages" },
     { name: "R", level: 88, icon: Code, category: "Programming Languages" },
+    { name: "Go", level: 80, icon: Code, category: "Programming Languages" },
     { name: "PostgreSQL/MongoDB", level: 87, icon: Database, category: "Database" },
 { name: "AzureSQL", level: 85, icon: Database, category: "Database" },
 { name: "MYSQL", level: 80, icon: Database, category: "Database" },
+{ name: "DynamoDB/Cassandra", level: 78, icon: Database, category: "Database" },
+{ name: "Redis/Valkey", level: 78, icon: Database, category: "Database" },
     { name: "React/Next.js", level: 92, icon: Globe, category: "Frontend" },
+    { name: "Angular", level: 90, icon: Globe, category: "Frontend" },
+    { name: "Vue.js", level: 78, icon: Globe, category: "Frontend" },
     { name: "HTML", level: 92, icon: Globe, category: "Frontend" },
     
     { name: "CSS", level: 92, icon: Globe, category: "Frontend" },
     
     { name: "SCSS", level: 92, icon: Globe, category: "Frontend" },
     { name: "Node.js/Express", level: 88, icon: Server, category: "Backend" },
+    { name: "Java/Spring Boot", level: 90, icon: Server, category: "Backend" },
+    { name: "GraphQL", level: 85, icon: Server, category: "Backend" },
+    { name: "Apache Kafka", level: 85, icon: Server, category: "Backend" },
+    { name: "JPA/Hibernate", level: 82, icon: Server, category: "Backend" },
     { name: "Machine Learning", level: 90, icon: Brain, category: "AI/ML" },
     { name: "Deep Learning", level: 85, icon: Cpu, category: "AI/ML" },
      { name: "Natural Language Processing", level: 85, icon: Cpu, category: "AI/ML" },
     { name: "Streamlit", level: 85, icon: Cpu, category: "AI/ML" },
+    { name: "MCP Servers & AI Agents", level: 90, icon: Brain, category: "AI/ML" },
+    { name: "Claude API / GitHub Copilot", level: 88, icon: Brain, category: "AI/ML" },
+    { name: "Prompt Engineering", level: 88, icon: Brain, category: "AI/ML" },
         { name: "AWS/Azure", level: 83, icon: Cloud, category: "Cloud" },
     { name: "Docker/Kubernetes", level: 80, icon: Server, category: "DevOps" },
+    { name: "Helm/Terraform", level: 78, icon: Server, category: "DevOps" },
+    { name: "Ansible", level: 75, icon: Server, category: "DevOps" },
+    { name: "Prometheus/Grafana", level: 80, icon: BarChart3, category: "DevOps" },
     { name: "Git/CI/CD", level: 90, icon: GitBranch, category: "DevOps" },
     { name: "Eclipse", level: 85, icon: AppWindow, category: "Applications" },
   { name: "VS Code", level: 90, icon: AppWindow, category: "Applications" },
@@ -176,15 +191,43 @@ const filteredProjects = activeProjectCategory === "All"
 
   const experience = [
     {
+      title: "Software Engineer",
+      company: "Cotiviti (Endeavour Technologies Inc)",
+      period: "Nov 2025 - Present",
+      description: "Designing cloud-native healthcare microservices with event-driven pipelines and AI-powered developer tooling for 30+ enterprise clients across claims adjudication and appeal processing platforms, maintaining >90% test coverage and <5% defect rate.",
+      achievements: [
+        "Architected Java/Spring Boot microservices and GraphQL APIs with a Kafka event service layer delivering significant throughput and fault isolation across high-volume claim adjudication workflows serving millions of transactions.",
+        "Engineered a custom MCP server integrating Jira, production-log, and context feeder AI agents and skills to autonomously drive spec-based development at enterprise scale.",
+        "Built AI code review and defect-analysis agents autonomously inspecting Spring Boot logic, GraphQL resolver chains, and Angular 16/TypeScript components, accelerating PR cycles by 60% while improving defect-fix and RCA efficiency.",
+        "Designed a reusable report-configuration framework for 30+ healthcare clients with dynamic mapping, standardizing validation rules and automating orchestration, eliminating 90% of manual onboarding for new clients.",
+        "Eliminated duplicate-claim revenue leakage by engineering an Angular 16/TS detection workflow integrating REST polling and Kafka event stream consumption to validate live claim status and enforce deduplication.",
+        "Implemented Prometheus metrics instrumentation and Grafana dashboards across 10+ microservices for real-time SLA visibility, proactive alerting, and data-driven performance tuning.",
+        "Standardized Kubernetes and Helm chart deployments with Jenkins CI/CD automated rollback triggers and blue-green strategies, reducing deployment downtime to near-zero for healthcare-critical systems."
+      ]
+    },
+    {
+      title: "Software Engineer",
+      company: "Community Dreams Foundation",
+      period: "Jul 2025 - Oct 2025",
+      description: "Developed a Java-based financial application to facilitate the organization's fund processing, achieving a 30% reduction in processing overhead.",
+      achievements: [
+        "Architected an Angular 16 micro-frontend and containerized Go microservices fund-tracking platform with reusable UI components and dynamic resource allocation, reducing high-traffic sudden disruptions by 80%.",
+        "Implemented MongoDB document funds data with indexed query optimization to scale to 1+ billion real-time records across 100+ client accounts, achieving API response times under 15 seconds through parallel handoffs.",
+        "Designed a lazy-loaded Angular module architecture with NgRx state management and reusable components, reducing bundle size and enabling rapid feature iteration through the micro-frontend and AWS ECS to support dynamic scale."
+      ]
+    },
+    {
       title: "Application Developer",
       company: "University of Oklahoma",
-      period: "2023 - Present",
-      description: "Led the development of scalable web applications using React, Java, JavaScript, and Angular. Provided mentorship to over 120 students in Data Mining and Database Management courses, offering guidance on real-world applications, project development, and conceptual understanding.",
+      period: "Aug 2023 - May 2025",
+      description: "Rebuilt legacy university systems and delivered AI/ML-integrated full-stack platforms driving 40% engagement uplift and 30% performance improvement serving thousands of active users, establishing a team-wide AI-augmented engineering practice.",
             achievements: [
        "Boosted user engagement for React.js based learning platform by 40% through implementing personalized content recommendations, flexible tag-based navigation, and expert verification support.",
   "Redesigned ISS web application using Angular 16 to incorporate reusable components for chat support and inter active dashboards, utilizing lazy loading and enhanced overall application performance by 30%.",
  "Designed a secure Azure SQL database using TDE encryption and role-based access control to store student records",
-      "Contributed to medical advancement by designing a machine learning-based web app that detects kidney stones using the Fuzzy C-means algorithm, enhanced with GLCM and DWT techniques."]
+      "Contributed to medical advancement by designing a machine learning-based web app that detects kidney stones using the Fuzzy C-means algorithm, enhanced with GLCM and DWT techniques.",
+      "Integrated Gemini and GitHub Copilot for AI-assisted LLM test generation and code scaffolding, establishing team-wide AI-augmented engineering practices across all active projects.",
+      "Built OAuth 2.0/JWT integrations securing access for 5,000+ student and faculty users with zero security incidents."]
     },
     {
       title: "Software Engineer/Analyst",
@@ -201,12 +244,13 @@ const filteredProjects = activeProjectCategory === "All"
     },
     {
       title: "Software Developer",
-      company: "Talentsprint-WISE",
-      period: "2020 - 2022",
-      description: "Full-stack development using modern web technologies. Contributed to product development from conception to deployment.",
+      company: "Talentsprint",
+      period: "Aug 2021 - May 2022",
+      description: "Delivered full-stack platforms integrating AES-256 encryption, IBM Watson NLP, and Elasticsearch-powered search, increasing buyer engagement by 40% and achieving <100ms API response times.",
       achievements: [
-         "Implemented an Angular-based web application with AES-encrypted Java backend to enable secure transactions between farmers and customers. Integrated IBM Watson Assistant for live chat support and user feedback service."
- ,"Built a housing rental app using Django and Python to support advanced search filters with real-time chatbot support powered by TensorFlow and NLP, ensuring a seamless and efficient user experience."
+         "Architected an Angular/Java e-commerce platform with AES-256-encrypted transactions and IBM Watson for real-time chat, intent classification, and automated query resolution, boosting user engagement by 40% within 60 days."
+ ,"Implemented REST APIs with JPA/Hibernate and MySQL composite-index queries achieving sub-1-second response times."
+ ,"Built a Django/Python rental platform with Elasticsearch-backed multi-filter property search and an NLP conversational chatbot using named-entity recognition, improving search-to-inquiry conversion and match time by 35%."
  ,"Gained hands-on expertise in Angular, Django, Core Java, Python, and machine learning tools, while strengthening skills in secure web application design and deployment.",
    ] },
   ];
@@ -227,7 +271,7 @@ const filteredProjects = activeProjectCategory === "All"
               Roshini Talluru
             </div>
             <div className="hidden md:flex space-x-8">
-              {['home', 'about','experience',  'projects', 'skills', 'education','contact'].map((item) => (
+              {['home', 'about','experience',  'projects', 'skills', 'education','awards','contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -254,7 +298,7 @@ const filteredProjects = activeProjectCategory === "All"
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 p-1">
               <img
-  src="images/bio.jpeg"
+  src="public\images\bio.jpeg"
   alt="Roshini Talluru"
   className="w-full h-full rounded-full object-cover"
 />
@@ -264,10 +308,10 @@ const filteredProjects = activeProjectCategory === "All"
             Roshini Talluru
           </h1>
           <p className="text-xl md:text-2xl text-purple-200 mb-4 max-w-3xl mx-auto">
-            Full-Stack Developer & Data Scientist
+            Software Engineer — Full-Stack, Cloud-Native & AI-Augmented Systems
           </p>
           <p className="text-lg text-purple-300 mb-8 max-w-2xl mx-auto">
-            Bridging the gap between cutting-edge technology and data-driven insights
+            Building healthcare-scale microservices and AI-powered developer tooling at the intersection of software engineering and data science
           </p>
           <div className="flex justify-center space-x-6 mb-12">
             <a href="mailto:roshini_t@outlook.com" className="text-white hover:text-purple-300 transition-colors">
@@ -282,7 +326,7 @@ const filteredProjects = activeProjectCategory === "All"
 
 {/* Resume Link */}
 <a
-  href="images/Roshini_talluru_Resume.pdf"
+  href="public/images/Roshini_Talluru_Resume.pdf"
   target="_blank"
   rel="noopener noreferrer"
   className="text-white hover:text-purple-300 transition-colors"
@@ -306,15 +350,16 @@ const filteredProjects = activeProjectCategory === "All"
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                I'm a versatile technologist with expertise spanning full-stack development and data science. 
-                My unique combination of software engineering skills and analytical capabilities allows me to 
-                build comprehensive solutions that are both technically robust and data-driven.
+                I'm a versatile technologist with expertise spanning full-stack development, cloud-native systems, 
+                and data science. As a Software Engineer at Cotiviti, I design healthcare-scale microservices and 
+                event-driven pipelines, and build AI-powered developer tooling that accelerates engineering teams 
+                across 30+ enterprise clients.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
                 From developing scalable web applications with modern frameworks to implementing machine learning 
-                models that drive business decisions, I thrive at the intersection of technology and data. 
-                My experience includes building end-to-end systems, optimizing performance, and creating 
-                intuitive user experiences.
+                models and AI agents that drive business decisions, I thrive at the intersection of technology and data. 
+                My experience includes building end-to-end systems, engineering custom MCP servers and AI agents, 
+                optimizing performance, and creating intuitive user experiences.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
                 I'm passionate about leveraging technology to solve complex problems and am always eager to 
@@ -353,7 +398,7 @@ const filteredProjects = activeProjectCategory === "All"
                   <div className="flex items-center space-x-3">
   <FileText className="w-5 h-5 text-purple-400" />
   <a
-    href="images/Roshini_talluru_Resume.pdf"
+    href="src/Roshini_talluru_Resume.pdf"
     target="_blank"
     rel="noopener noreferrer"
     className="text-purple-300 hover:underline"
@@ -508,12 +553,12 @@ const filteredProjects = activeProjectCategory === "All"
       <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20">
         <div className="flex justify-between items-center mb-4">
           <div>
-            <h3 className="text-xl font-semibold text-white">M.S. in Data Science and Analytics</h3>
-            <p className="text-purple-300">University of Oklahoma</p>
+            <h3 className="text-xl font-semibold text-white">M.S. in Computer Science</h3>
+            <p className="text-purple-300">University of Oklahoma, Norman, OK</p>
           </div>
-          <span className="text-gray-400">2023 - 2025</span>
+          <span className="text-gray-400">Aug 2023 - May 2025</span>
           </div>
-        <p className="text-gray-300">Awarded Merit Scholarship</p>  
+        <p className="text-gray-300">Awarded the Dorothy Grace Barkow Scholarship ($3,000) in recognition of academic excellence.</p>  
         <p className="text-gray-300">Relevant Coursework: Machine Learning, Advanced Data Mining, Database Systems, Deep Learning, Healthcare Analytics, Big Data.</p>
       </div>
       <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20">
@@ -522,12 +567,62 @@ const filteredProjects = activeProjectCategory === "All"
             <h3 className="text-xl font-semibold text-white">B.Tech in Computer Science and Engineering</h3>
             <p className="text-purple-300">BVRIT Hyderabad</p>
           </div>
-    </div>
+          <span className="text-gray-400">2017 - 2021</span>
+        </div>
         <p className="text-gray-300">Graduated with First Class Distinction. Involved in research and Women in Software Engineering Program (WISE).</p>
       </div>
     </div>
   </div>
 </section>
+
+      {/* Awards & Publications Section */}
+      <section id="awards" className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-white text-center mb-16">Awards & Publications</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20">
+              <div className="flex items-center space-x-3 mb-4">
+                <Award className="w-6 h-6 text-purple-400" />
+                <h3 className="text-xl font-semibold text-white">Awards & Recognition</h3>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start space-x-3">
+                  <Star className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300">Game Changer Award, Deloitte — recognized for outstanding delivery performance and zero-escalation rollouts.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Star className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300">Dorothy Grace Barkow Scholarship ($3,000) — awarded for academic excellence.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Star className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300">Oracle Certified — Advanced Artificial Intelligence with Machine Learning in Java.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Star className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300">Microsoft Certified — Azure AI Engineer Associate.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <Star className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300">Codinza Certified — Web Development using ReactJS and Java.</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20">
+              <div className="flex items-center space-x-3 mb-4">
+                <FileText className="w-6 h-6 text-purple-400" />
+                <h3 className="text-xl font-semibold text-white">Research Publications</h3>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start space-x-3">
+                  <Star className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300">"Examination Room Guidance System" — Third International Conference on Engineering and Advancement in Technology (ICEAT), IEEE, 2022.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
